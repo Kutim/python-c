@@ -4,9 +4,6 @@
 {
     "distutils": {
         "depends": [],
-        "libraries": [
-            "m"
-        ],
         "name": "demo",
         "sources": [
             "demo.pyx"
