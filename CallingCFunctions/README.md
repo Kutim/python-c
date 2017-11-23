@@ -39,3 +39,25 @@ if __name__=="__main__":
     from demo import f
     print(f(100))
 ```
+
+```Python
+# teststdlib.pyx
+
+from libc.stdlib cimport atoi
+
+cpdef parse_charptr_to_py_int(char* s):   # oops！ 此处在调用时类型报错 TypeError: expected bytes
+    assert s is not NULL, "byte string value is NULL"
+    return atoi(s)   # note: atoi() has no error detection!
+```
+
+```Python
+# setup_teststdlib.py
+
+from distutils.core import setup
+from Cython.Build import cythonize
+
+setup(
+    ext_modules=cythonize("teststdlib.pyx"),
+)
+
+```
