@@ -25,12 +25,14 @@
   ./autogen.sh && \
   ./configure --prefix=/opt/calg/ && \
   make && \
-  make install
+  make install && \
+  rm -rf c-algorithms
 
-ENV CFLAGS="-I /opt/calg/include/libcalg-1.0/" \
-    LDFLAGS="-L /opt/calg/lib"
+ENV  \
+    PYTHONPATH="/code/"
 
 RUN  \
     python setup.py build_ext -i
 
-CMD ["/bin/bash","-l"]
+#CMD ["bash","-l"]
+#CMD ["python","test.py"]

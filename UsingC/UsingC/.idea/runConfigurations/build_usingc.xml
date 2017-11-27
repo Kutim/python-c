@@ -1,20 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="build-usingc" type="docker-deploy" factoryName="dockerfile" server-name="Docker33">
     <deployment type="dockerfile">
       <settings>
         <option name="JSONFilePath" value="" />
         <option name="command" value="" />
+        <option name="commandLineOptions" value="" />
         <option name="containerName" value="" />
         <option name="entrypoint" value="" />
         <option name="imageTag" value="" />
+        <option name="sourceFilePath" value="$PROJECT_DIR$/Dockerfile" />
         <option name="startBrowserSettings">
           <browser />
         </option>
-        <option name="sourceFilePath" value="$PROJECT_DIR$/Dockerfile" />
       </settings>
     </deployment>
     <method />
   </configuration>
 </component>
-

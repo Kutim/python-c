@@ -3,6 +3,6 @@ services:
 
   usingc:
     build: .
-    command: ["python"]
+    command: ["bash","-l"]
     volumes:
       - .:/code
