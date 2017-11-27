@@ -3,7 +3,7 @@
 
 除了编写快速代码之外，Cython的一个主要用例是从Python代码调用外部C库。由于Cython代码本身编译为C代码，直接在代码中调用C函数实际上是微不足道的。以下给出了一个在Cython代码中使用（和包装）外部C库的完整示例，包括适当的错误处理和有关为Python和Cython代码设计合适的API的注意事项。
 
-下面以将 [[CAlg]](https://github.com/fragglet/c-algorithms "CAlg") 的队列算法封装为存储整型值的 FIFO 队列为例，。
+下面以将 [[CAlg]](https://github.com/fragglet/c-algorithms "CAlg") 的队列算法封装为存储整型值的 FIFO 队列为例。(安装时注意缺失的依赖libtool)
 
 ## 2. 定义外部声明
 
